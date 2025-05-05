@@ -1,0 +1,28 @@
+main {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 4rem;
+}
+h1,
+h2,
+h3 {
+  color: #00365a;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 3px solid #007acc;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
