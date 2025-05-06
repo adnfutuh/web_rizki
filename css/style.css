@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   min-height: 100vh;
 }
+/* Header */
 a {
   color: #007acc;
   text-decoration: none;
@@ -63,4 +64,13 @@ nav {
 }
 .nav-links a:hover::after {
   transform: scale(0.5);
+}
+/* Footer */
+footer {
+  background-color: #00365a;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+  user-select: none;
 }

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/main/main.css" />
     <link rel="stylesheet" href="./css/main/about/about.css" />
     <link rel="stylesheet" href="./css/main/projects/projects.css" />
+    <link rel="stylesheet" href="./css/main/skills/skills.css" />
+    <link rel="stylesheet" href="./css/main/contact/contact.css" />
     <title>My Portfolio</title>
   </head>
   <body>
@@ -103,6 +105,63 @@
           </article>
         </div>
       </section>
+
+      <section id="skills" tabindex="0" aria-label="Skills section">
+        <h2>Skills & Tools</h2>
+        <div class="skills-list" aria-label="List of technical skills">
+          <span class="skill-item">HTML5</span>
+          <span class="skill-item">CSS3</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">Node.js</span>
+          <span class="skill-item">Git & GitHub</span>
+          <span class="skill-item">Responsive Design</span>
+          <span class="skill-item">API Integration</span>
+        </div>
+      </section>
+
+      <section id="contact" tabindex="0" aria-label="Contact section">
+        <h2>Contact Me</h2>
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+            aria-describedby="nameError"
+          />
+          <span id="nameError">Please enter your name</span>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            aria-describedby="emailError"
+          />
+          <span id="emailError">Please enter a valid email</span>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            aria-required="true"
+            aria-describedby="messageError"
+          ></textarea>
+          <span id="messageError">Please enter your message</span>
+          <button type="submit">Send Message</button>
+        </form>
+        <p
+          id="formMessage"
+          role="alert"
+          aria-live="polite"
+          style="color: green; font-weight: 600; margin-top: 0.8rem; display: none"
+        ></p>
+      </section>
     </main>
+    <footer>&copy; 2025 Rizki Adnan Futuh. All rights reserved.</footer>
   </body>
 </html>
