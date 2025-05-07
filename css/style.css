@@ -11,6 +11,12 @@ body {
   scroll-behavior: smooth;
   min-height: 100vh;
 }
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
 /* Header */
 #hamburger-menu {
   display: none;
