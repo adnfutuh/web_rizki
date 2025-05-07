@@ -10,7 +10,6 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 /* Header */
 #hamburger-menu {
@@ -82,6 +81,7 @@ footer {
 @media (max-width: 600px) {
   body {
     font-size: 14px;
+    overflow-x: hidden;
   }
   #hamburger-menu {
     display: inline-block;
