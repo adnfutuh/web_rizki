@@ -1,8 +1,10 @@
+/* Reset dan Global */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
@@ -10,16 +12,6 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   min-height: 100vh;
-}
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  box-sizing: border-box;
-}
-/* Header */
-#hamburger-menu {
-  display: none;
 }
 a {
   color: #007acc;
@@ -31,9 +23,11 @@ a:focus {
   color: #004f8c;
   outline: none;
 }
+
+/* Header */
 header {
   background-color: #fff;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -45,6 +39,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .logo {
   flex-grow: 1;
@@ -74,6 +69,18 @@ nav {
 .nav-links a:hover::after {
   transform: scale(0.5);
 }
+
+/* Hamburger */
+#hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #007acc;
+  z-index: 10000;
+}
+
 /* Footer */
 footer {
   background-color: #00365a;
@@ -83,30 +90,25 @@ footer {
   font-size: 0.9rem;
   user-select: none;
 }
+
 /* Responsive */
 @media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    overflow-x: hidden;
-  }
-  #hamburger-menu {
-    display: inline-block;
-    cursor: pointer;
+  html {
+    font-size: 65%;
   }
 
-  /* .navbar {
-    flex-wrap: wrap;
-    position: relative;
-  } */
+  #hamburger-menu {
+    display: inline-block;
+  }
 
   .nav-links {
     flex-direction: column;
     position: absolute;
     top: 100%;
     right: -100%;
-    width: 250px;
+    background-color: #fff;
+    width: 30rem;
     height: 100vh;
-    background-color: white;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     padding: 2rem 1.5rem;
     gap: 1rem;
@@ -120,9 +122,12 @@ footer {
 
   .nav-links a {
     display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
     font-size: 1.25rem;
     color: #007acc;
   }
+
   .nav-links a::after {
     transform-origin: 0 0;
   }
@@ -131,6 +136,7 @@ footer {
   }
 }
 
+/* Tambahan Style */
 nav {
   padding: 0.75rem 1rem;
 }
