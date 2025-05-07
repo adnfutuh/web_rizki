@@ -12,6 +12,9 @@ body {
   min-height: 100vh;
 }
 /* Header */
+#hamburger-menu {
+  display: none;
+}
 a {
   color: #007acc;
   text-decoration: none;
@@ -27,7 +30,7 @@ header {
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9999;
 }
 nav {
   max-width: 900px;
@@ -38,6 +41,7 @@ nav {
   align-items: center;
 }
 .logo {
+  flex-grow: 1;
   font-weight: 700;
   font-size: 1.5rem;
   color: #007acc;
@@ -78,26 +82,67 @@ footer {
   body {
     font-size: 14px;
   }
-  nav {
-    padding: 0.75rem 1rem;
+  #hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
   }
+
+  /* .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  } */
+
   .nav-links {
-    gap: 0.8rem;
-    font-size: 0.9rem;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
   }
-  #about p {
-    font-size: 0.95rem;
+
+  .nav-links.active {
+    right: 0;
   }
-  #contact form {
-    width: 100%;
+
+  .nav-links a {
+    display: block;
+    font-size: 1.25rem;
+    color: #007acc;
   }
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .nav-links a::after {
+    transform-origin: 0 0;
   }
-  main {
-    margin: 1.5rem auto 2rem;
+  .nav-links a:hover::after {
+    transform: scaleX(0.4);
   }
-  .project-image {
-    height: 180px;
-  }
+}
+
+nav {
+  padding: 0.75rem 1rem;
+}
+.nav-links {
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+#about p {
+  font-size: 0.95rem;
+}
+#contact form {
+  width: 100%;
+}
+.projects-grid {
+  grid-template-columns: 1fr;
+}
+main {
+  margin: 1.5rem auto 2rem;
+}
+.project-image {
+  height: 180px;
 }

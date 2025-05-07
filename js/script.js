@@ -43,3 +43,17 @@ form.addEventListener("submit", function (event) {
     form.reset();
   }
 });
+
+// Hamburger-Menu
+const navbarnav = document.querySelector(".nav-links");
+const hamburger = document.querySelector("#hamburger-menu");
+
+hamburger.onclick = () => {
+  navbarnav.classList.toggle("active");
+};
+
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarnav.contains(e.target)) {
+    navbarnav.classList.remove("active");
+  }
+});
