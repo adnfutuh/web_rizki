@@ -47,13 +47,16 @@ form.addEventListener("submit", function (event) {
 // Hamburger-Menu
 const navbarnav = document.querySelector(".nav-links");
 const hamburger = document.querySelector("#hamburger-menu");
+const icon = hamburger.querySelector("i");
 
 hamburger.onclick = () => {
   navbarnav.classList.toggle("active");
+  icon.classList.toggle("fa-times");
 };
 
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarnav.contains(e.target)) {
     navbarnav.classList.remove("active");
+    icon.classList.remove("fa-times");
   }
 });

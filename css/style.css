@@ -81,6 +81,14 @@ nav {
   z-index: 10000;
 }
 
+#hamburger-menu i {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#hamburger-menu i.fa-times {
+  transform: rotate(-90deg);
+}
+
 /* Footer */
 footer {
   background-color: #00365a;
@@ -94,7 +102,8 @@ footer {
 /* Responsive */
 @media (max-width: 600px) {
   html {
-    font-size: 65%;
+    font-size: 85%;
+    overflow-x: hidden;
   }
 
   #hamburger-menu {
@@ -107,7 +116,7 @@ footer {
     top: 100%;
     right: -100%;
     background-color: #fff;
-    width: 30rem;
+    width: 20rem;
     height: 100dvh;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     padding: 2rem 1.5rem;
@@ -127,12 +136,22 @@ footer {
     font-size: 1.25rem;
     color: #007acc;
   }
+  .nav-links a:hover,
+  a:focus {
+    color: #004f8c;
+    outline: none;
+  }
 
   .nav-links a::after {
-    transform-origin: 0 0;
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #004f8c;
+    transform: scale(0);
+    transition: 0.2s linear;
   }
   .nav-links a:hover::after {
-    transform: scaleX(0.4);
+    transform: scale(0.5);
   }
 }
 
